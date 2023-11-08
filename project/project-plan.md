@@ -17,7 +17,7 @@ This data science project aims to compare the road traffic accident in Munich an
 
 # Work Packages
 
-+ Clean and explore the data: Clean data from the two data sources, ensuring they are in a compatible format and explore the data to gain insights on road accidents and weather patterns.
++ Clean and explore the data: Clean data from the two data sources, ensuring they are in a compatible format and explore the data to gain insights on road accidents and weather patterns.[1](https://github.com/bleebimal/made-project/issues/1)
   
 + Type of road accidents comparison: Compare the different types of road accidents based on vehicles involved
 
