@@ -1,19 +1,19 @@
 pipeline carsE3DataPipeline{
      
-    //getting file from url
-    block carsE3DataExtractor oftype HttpExtractor{	
+    //getting data from url
+    block carsDataExtractor oftype HttpExtractor{	
         	url: "https://www-genesis.destatis.de/genesis/downloads/00/tables/46251-0021_00.csv";
     }	
-    //converting file to textfile
-    block carsE3DataTextFileInterpreter oftype TextFileInterpreter{
-encoding: "Windows-1252";
+    //converting to textfile
+    block carsDataTextFileInterpreter oftype TextFileInterpreter{
+encoding: "utf8";
     }
     //covnerting textfile to csv
-    block carsE3DataCSVFileInterpreter oftype CSVInterpreter{
+    block carsDataCSVFileInterpreter oftype CSVInterpreter{
         delimiter: ";";
     }
 
-   block carsE3ColumnDeleter oftype ColumnDeleter {
+   block carsColumnDeleter oftype ColumnDeleter {
         delete: [column D, column E, column F, column G, column H, column I, column J, column K, column L, column N,
                  column O, column P, column Q, column R, column S, column T, column U, column V, column X, column Y, column Z, column AM,
                  column AZ, column AB, column AS, column AU, column AT, column AH,column AI, column AJ, column AK, column AL, column AA, column AN, 
@@ -22,7 +22,7 @@ encoding: "Windows-1252";
                  column BP, column BQ, column BR, column BS, column BT];
     }
     //converting csv to table
-    block carsE3DataTableInterpreter oftype TableInterpreter{
+    block carsDataTableInterpreter oftype TableInterpreter{
         header:false;
         columns: [
             "date" oftype text,
@@ -40,7 +40,7 @@ encoding: "Windows-1252";
     }
     //generating sqlite file from table, enter table and filename while running the script using runtime parameters (carsE3_DATA_TABLE_FILENAME , carsE3_DATA_SQLITE_FILENAME)
 
-    block carsE3DataSQLiteInterpreter oftype SQLiteLoader {
+    block carsDataSQLiteInterpreter oftype SQLiteLoader {
 		 table: "cars";
          file: "cars.sqlite";
 	}
@@ -61,25 +61,25 @@ encoding: "Windows-1252";
     }
     //pipes
     pipe {
-        from: carsE3DataExtractor;
-        to: carsE3DataTextFileInterpreter;
+        from: carsDataExtractor;
+        to: carsDataTextFileInterpreter;
     }
     pipe {
-        from: carsE3DataTextFileInterpreter;
-        to: carsE3DataCSVFileInterpreter;
+        from: carsDataTextFileInterpreter;
+        to: carsDataCSVFileInterpreter;
     }
     pipe {
-        from: carsE3DataCSVFileInterpreter;
-        to: carsE3ColumnDeleter;
-    }
- 
-    pipe {
-        from: carsE3ColumnDeleter;
-        to: carsE3DataTableInterpreter;
+        from: carsDataCSVFileInterpreter;
+        to: carsColumnDeleter;
     }
  
     pipe {
-        from: carsE3DataTableInterpreter;
-        to: carsE3DataSQLiteInterpreter;
+        from: carsColumnDeleter;
+        to: carsDataTableInterpreter;
+    }
+ 
+    pipe {
+        from: carsDataTableInterpreter;
+        to: carsDataSQLiteInterpreter;
     }
 }
