@@ -7,7 +7,7 @@ pipeline carsE3DataPipeline{
     //converting to textfile
     block carsDataTextFileInterpreter oftype TextFileInterpreter{
         //Encoding 
-encoding: "utf-16"; 
+encoding: "ibm866"; 
     }
     //covnerting textfile to csv
     block carsDataCSVFileInterpreter oftype CSVInterpreter{
