@@ -38,7 +38,7 @@ encoding: "utf8";
 
 		];
     }
-    //generating sqlite file from table, enter table and filename while running the script using runtime parameters (carsE3_DATA_TABLE_FILENAME , carsE3_DATA_SQLITE_FILENAME)
+    //generating sqlite file from table
 
     block carsDataSQLiteInterpreter oftype SQLiteLoader {
 		 table: "cars";
