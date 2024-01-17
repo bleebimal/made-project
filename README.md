@@ -1,42 +1,47 @@
-# Methods of Advanced Data Engineering Template Project
+Methods of Advanced Data Engineering: An Analysis of Distribution of Students at Higher Studies Across Universities in Nepal
 
-This template project provides some structure for your open data project in the MADE module at FAU.
-This repository contains (a) a data science project that is developed by the student over the course of the semester, and (b) the exercises that are submitted over the course of the semester.
-Before you begin, make sure you have [Python](https://www.python.org/) and [Jayvee](https://github.com/jvalue/jayvee) installed. We will work with [Jupyter notebooks](https://jupyter.org/). The easiest way to do so is to set up [VSCode](https://code.visualstudio.com/) with the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).
+This project aims to see the overall distribution of student in higher studies in Nepal in the year 2018 based on different universities, gender of students, location and types of campuses.
+
+# Data Sets
+
+<a href="https://opendatanepal.com/dataset/5fb1e284-d6a0-4d7d-8945-1632e32bf1f6/resource/3529bfab-cca9-4170-bf5c-599eb9e8e545/download/university-wise-student-enrollment-of-higher-education-by-sex-in-2074-bs.csv" target="_blank">Gernder Data for Students</a>
+
++ Data Type: .csv
+
+## DataSource 2 :  University wise student distribution
++ Meta data: https://opendatanepal.com/dataset/university-wise-student-enrollment-of-higher-education-by-types-of-campuses
+
++ Data URL: https://opendatanepal.com/dataset/cda79f68-e517-4666-9d92-8601418ceb80/resource/5193053a-b6fe-45e7-a6ba-8aae99ced378/download/university-wise-student-enrollment-of-higher-education-by-types-of-campuses-in-2074-bs.csv
 
 
-## Project Work
-Your data engineering project will run alongside lectures during the semester. We will ask you to regularly submit project work as milestones so you can reasonably pace your work. All project work submissions **must** be placed in the `project` folder.
+## DataSource 3: Province wise student distribution for Universities
++ Meta Data:https://opendatanepal.com/dataset/university-wise-student-enrollment-ministry-of-education
 
-### Exporting a Jupyter Notebook
-Jupyter Notebooks can be exported using `nbconvert` (`pip install nbconvert`). For example, to export the example notebook to html: `jupyter nbconvert --to html examples/final-report-example.ipynb --embed-images --output final-report.html`
++ Data URL: https://opendatanepal.com/dataset/df7ab4c7-384a-4175-bc19-044fade5c8f2/resource/f4674ab7-5f5f-4a04-ac11-f8cefc68f8c4/download/university-wise-student-enrollment-by-province-in-2074-bs.csv
+
++ Data Type: .csv
+
+## DataSource 4: Degree Level wise student distribution for Universities
++ Meta Data:https://opendatanepal.com/dataset/university-wise-student-enrollment-of-higher-education-by-levels-ministry-of-education
+
++ Data URL: https://opendatanepal.com/dataset/aaba8c3f-b4d3-4f1c-9ef2-32fddbeb0876/resource/115f055f-3d15-4ba8-8bb4-a76b4522acfd/download/university-wise-student-enrollment-of-higher-education-by-levels-in-2074-bs.csv
+
++ Data Type: .csv
 
 
-## Exercises
-During the semester you will need to complete exercises, sometimes using [Python](https://www.python.org/), sometimes using [Jayvee](https://github.com/jvalue/jayvee). You **must** place your submission in the `exercises` folder in your repository and name them according to their number from one to five: `exercise<number from 1-5>.<jv or py>`.
+# Work Packages
 
-In regular intervalls, exercises will be given as homework to complete during the semester. We will divide you into two groups, one completing an exercise in Jayvee, the other in Python, switching each exercise. Details and deadlines will be discussed in the lecture, also see the [course schedule](https://made.uni1.de/). At the end of the semester, you will therefore have the following files in your repository:
++ Clean and explore the data: Clean data from the 4 data sources, ensuring they are in a compatible format and explore the data to gain insights on student distribution .[1](https://github.com/bleebimal/made-project/issues/1)
+  
++ Type of Universities: Compare the different types of Universities.
 
-1. `./exercises/exercise1.jv` or `./exercises/exercise1.py`
-2. `./exercises/exercise2.jv` or `./exercises/exercise2.py`
-3. `./exercises/exercise3.jv` or `./exercises/exercise3.py`
-4. `./exercises/exercise4.jv` or `./exercises/exercise4.py`
-5. `./exercises/exercise5.jv` or `./exercises/exercise5.py`
++ Size of the Universites: Compare the number of students in diffeerent universities.
 
-### Exercise Feedback
-We provide automated exercise feedback using a GitHub action (that is defined in `.github/workflows/exercise-feedback.yml`). 
++ Gender Distribution: Compare gender distribution of students and find correlation .
 
-To view your exercise feedback, navigate to Actions -> Exercise Feedback in your repository.
++ Location Distribution: Compare the distribution of students across different provices of the country.
 
-The exercise feedback is executed whenever you make a change in files in the `exercise` folder and push your local changes to the repository on GitHub. To see the feedback, open the latest GitHub Action run, open the `exercise-feedback` job and `Exercise Feedback` step. You should see command line output that contains output like this:
++ Degree Level Distribution : Compare degree level distribution of students across universities.
 
-```sh
-Found exercises/exercise1.jv, executing model...
-Found output file airports.sqlite, grading...
-Grading Exercise 1
-	Overall points 17 of 17
-	---
-	By category:
-		Shape: 4 of 4
-		Types: 13 of 13
-```
++ Insights and recommendations: Provide insights and conclusion
+
