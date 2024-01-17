@@ -2,7 +2,7 @@ Methods of Advanced Data Engineering: An Analysis of Distribution of Students at
 
 This project aims to see the overall distribution of student in higher studies in Nepal in the year 2018 based on different universities, gender of students, location and types of campuses.
 
-# Data Sets
+## Data Sets
 
 All the datasets have been taken from Open Data Nepal
 
@@ -14,11 +14,11 @@ All the datasets have been taken from Open Data Nepal
 
 4. <a href="https://opendatanepal.com/dataset/aaba8c3f-b4d3-4f1c-9ef2-32fddbeb0876/resource/115f055f-3d15-4ba8-8bb4-a76b4522acfd/download/university-wise-student-enrollment-of-higher-education-by-levels-in-2074-bs.csv" target="_blank">Students Enrolled in each Higheer level Studies</a>
 
-Implementation
+## Implementation
 
 Data from above sources are handled by the data loader pipeline. Necessary data transformation methods are implemented to make the data uniform and homogenous. To effectively catch the errors in  the code flow, test cases have been written to check them.
 
-Final Results
+## Final Results
 
 This project explored the data sets to find the distribution of students across various universities in Nepal. Further details and can be found in project-plan.md as well. The final report containing the findings is available as a notebook in file [project/report.ipynb]. The codes which generated those findings are available as a notebook too.
 
