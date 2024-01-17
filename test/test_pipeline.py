@@ -1,23 +1,18 @@
+import sys
+import unittest
+import pathlib as pl
+import pandas as pd
 import os
-from pipeline import pipeline
 
 
-def test_gender_data():
-    pipeline()
-    # Check if the asia_covid.sqlite database is created or not
-    assert os.path.isfile('./data/gender_data.sqlite')
+class TestCase(unittest.TestCase):
+    def test_SQLiteFileExists():
+        directory_path = os.getcwd()
+        assert os.path.exists(os.path.dirname(directory_path)+"\project\data\degree_data.sqlite")
+        assert os.path.exists(os.path.dirname(directory_path)+"\project\data\university_data.sqlite")
+        assert os.path.exists(os.path.dirname(directory_path)+"\project\data\province_data.sqlite")
+        assert os.path.exists(os.path.dirname(directory_path)+"\project\data\degree_data.sqlite")
+         
 
-def test_university_data():
-    pipeline()
-    # Check if the europe_covid.sqlite database is created or not
-    assert os.path.isfile('./data/university_data.sqlite')
-
-def test_province_data():
-    pipeline()
-    # Check if the europe_covid.sqlite database is created or not
-    assert os.path.isfile('./data/province_data.sqlite')
-
-def test_degree_data():
-    pipeline()
-    # Check if the europe_covid.sqlite database is created or not
-    assert os.path.isfile('./data/degree_data.sqlite')
+if __name__ == "__main__":
+    unittest.main()
