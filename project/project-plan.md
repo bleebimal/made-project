@@ -38,9 +38,9 @@ This data science project aims to see the overall distribution of student in hig
 
 + Clean and explore the data: Clean data from the 4 data sources, ensuring they are in a compatible format and explore the data to gain insights on student distribution .[1](https://github.com/bleebimal/made-project/issues/1)
   
-+ Type of Universities: Compare the different types of Universities.[2] (https://github.com/bleebimal/made-project/issues/2)
++ Type of Universities: Compare the different types of Universities.[2](https://github.com/bleebimal/made-project/issues/2)
 
-+ Size of the Universities: Compare the number of students in diffeerent universities. [3] (https://github.com/bleebimal/made-project/issues/3)
++ Size of the Universities: Compare the number of students in diffeerent universities. [3](https://github.com/bleebimal/made-project/issues/3)
 
 + Gender Distribution: Compare gender distribution of students and find correlation. [4](https://github.com/bleebimal/made-project/issues/4)
 
