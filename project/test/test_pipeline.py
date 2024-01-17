@@ -1,5 +1,5 @@
 import os
-from pipeline import pipeline
+from project.pipeline import pipeline
 
 def test_gender_data():
     pipeline()
@@ -20,3 +20,4 @@ def test_degree_data():
     pipeline()
     # Check if the degree_data.sqlite database is created or not
     assert os.path.isfile('./data/degree_data.sqlite')
+

@@ -26,6 +26,3 @@
    else
      pip install openpyxl
    fi
-
-
-# python -m unittest discover
