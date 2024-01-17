@@ -1,27 +1,50 @@
 # Summary
 
-This data science project aims to compare the road traffic accident in Munich and the weather patterns. We will analyse the frequency of traffic accidents and the associated reasons behind those specifically the weather conditions.
+This data science project aims to see the overall distribution of student in higher studies in Nepal in the year 2018 based on different universities, gender of students, location and types of campuses.
 
 # DataSources
 
-## DataSource1 : Road Traffic Accidents
-+ Meta data URL : https://mobilithek.info/offers/-8621735217358906806
-+ Data URL: [https://opendata.vag.de/dataset/08eb49f9-0f6c-4b76-96fd-5f8e3a0ac593/resource/c66d5b67-6a01-4190-a9cf-1de6359d07ae/download/20170601_haltestellen_id_geo.xlsx](https://www.regionalstatistik.de/genesisws/downloader/00/tables/46241-01-03-4_00.csv)
+## DataSource1 : Gender Distribution of Students for Universities
++ Meta data URL : https://opendatanepal.com/dataset/university-wise-student-enrollment-of-higher-education-by-sex-ministry-of-education
+
++ Data URL: https://opendatanepal.com/dataset/5fb1e284-d6a0-4d7d-8945-1632e32bf1f6/resource/3529bfab-cca9-4170-bf5c-599eb9e8e545/download/university-wise-student-enrollment-of-higher-education-by-sex-in-2074-bs.csv
+
 + Data Type: .csv
 
-## DataSource 2 : Weather Data Munich 1954-2022
-+ Meta data: https://www.kaggle.com/datasets/mexwell/weather-data-munich-1954-2022
-+ Data URL: https://www.kaggle.com/datasets/mexwell/weather-data-munich-1954-2022?select=weatherdata.csv
+## DataSource 2 :  University wise student distribution
++ Meta data: https://opendatanepal.com/dataset/university-wise-student-enrollment-of-higher-education-by-types-of-campuses
+
++ Data URL: https://opendatanepal.com/dataset/cda79f68-e517-4666-9d92-8601418ceb80/resource/5193053a-b6fe-45e7-a6ba-8aae99ced378/download/university-wise-student-enrollment-of-higher-education-by-types-of-campuses-in-2074-bs.csv
+
+
+## DataSource 3: Province wise student distribution for Universities
++ Meta Data:https://opendatanepal.com/dataset/university-wise-student-enrollment-ministry-of-education
+
++ Data URL: https://opendatanepal.com/dataset/df7ab4c7-384a-4175-bc19-044fade5c8f2/resource/f4674ab7-5f5f-4a04-ac11-f8cefc68f8c4/download/university-wise-student-enrollment-by-province-in-2074-bs.csv
+
++ Data Type: .csv
+
+## DataSource 4: Degree Level wise student distribution for Universities
++ Meta Data:https://opendatanepal.com/dataset/university-wise-student-enrollment-of-higher-education-by-levels-ministry-of-education
+
++ Data URL: https://opendatanepal.com/dataset/aaba8c3f-b4d3-4f1c-9ef2-32fddbeb0876/resource/115f055f-3d15-4ba8-8bb4-a76b4522acfd/download/university-wise-student-enrollment-of-higher-education-by-levels-in-2074-bs.csv
+
 + Data Type: .csv
 
 
 # Work Packages
 
-+ Clean and explore the data: Clean data from the two data sources, ensuring they are in a compatible format and explore the data to gain insights on road accidents and weather patterns.[1](https://github.com/bleebimal/made-project/issues/1)
++ Clean and explore the data: Clean data from the 4 data sources, ensuring they are in a compatible format and explore the data to gain insights on student distribution .[1](https://github.com/bleebimal/made-project/issues/1)
   
-+ Type of road accidents comparison: Compare the different types of road accidents based on vehicles involved
++ Type of Universities: Compare the different types of Universities.
 
-+ Correlation analysis: Find the correlation between different weather patterns and different road accidents.
++ Size of the Universites: Compare the number of students in diffeerent universities.
 
-+ Insights and recommendations: Provide insights and recommendations on how the weather impacts road accidents and what can be done to reduce those accidents.
++ Gender Distribution: Compare gender distribution of students and find correlation .
+
++ Location Distribution: Compare the distribution of students across different provices of the country.
+
++ Degree Level Distribution : Compare degree level distribution of students across universities.
+
++ Insights and recommendations: Provide insights and conclusion
 
