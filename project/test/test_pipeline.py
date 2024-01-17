@@ -16,7 +16,7 @@ def test_province_data():
     # Check if the province_data.sqlite database is created or not
     assert os.path.isfile('./data/province_data.sqlite')
 
-def test__data():
+def test_degree_data():
     pipeline()
     # Check if the degree_data.sqlite database is created or not
     assert os.path.isfile('./data/degree_data.sqlite')
