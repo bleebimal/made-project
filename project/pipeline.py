@@ -63,4 +63,5 @@ def pipeline():
     # print("Creating Degree Level Data table")
     # df_degree.to_sql("degree_data",'sqlite:///degree_data.sqlite',if_exists='replace')
 
+pipeline()
  
