@@ -4,7 +4,10 @@ run-name: ${{ github.actor }} is testing the project....
 on:
   push:
     branches:
-    - main
+      - main
+    paths:
+      - project/**
+
 
 jobs:
   project-feedback:
