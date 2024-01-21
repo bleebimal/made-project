@@ -1,0 +1,33 @@
+name: Project Testing
+run-name: ${{ github.actor }} is testing the project....
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  project-feedback:
+    runs-on: ubuntu-latest
+    
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Install python
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+    
+    # pip install
+    - name: Install packages
+      run: pip install -r requirements.txt
+    
+    - name: Kaggle auth
+
+    # Run exercise feedback
+    - name: Make test runnable
+      run: chmod +x /home/runner/work/MADE-WS23/MADE-WS23/project/tests.sh
+    - name: Run tests
+      run: |
+        /home/runner/work/MADE-WS23/MADE-WS23/project/tests.sh

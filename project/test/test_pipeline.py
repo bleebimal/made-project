@@ -1,4 +1,6 @@
 import os
+import sys
+sys.path.append(os.getcwd())
 from project.pipeline import pipeline
 
 def test_gender_data():
