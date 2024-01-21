@@ -25,9 +25,7 @@ jobs:
     
     - name: Kaggle auth
 
-    # Run exercise feedback
-    - name: Make test runnable
-      run: chmod +x /home/runner/work/MADE-WS23/MADE-WS23/project/tests.sh
-    - name: Run tests
-      run: |
-        /home/runner/work/MADE-WS23/MADE-WS23/project/tests.sh
+    # execute test pipeline
+      - name: Run shell script
+        run: |
+          chmod +x ./project/tests.sh &&  sh ./project/tests.sh
