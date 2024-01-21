@@ -1,23 +1,24 @@
-name: Publish
-on:
-  push:
-    branches:
-      - main
+name: Project test actions
+on: 
+    push:
+        branches:
+            - main
+
 jobs:
-  publish:
-    name: Install and publish
+  Project-test-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout 
         uses: actions/checkout@v3
 
-
-      - name: Set up Python 3.11
+      - name: Set up python 3.11
         uses: actions/setup-python@v4
         with:
-           python-version: 3.11
-
-     
-
-      - name: Run shell script
-        run: sh project/tests.sh 
+            python-version: 3.11
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+      - name: Run tests
+        run: |
+          ./project/tests.sh
+        
