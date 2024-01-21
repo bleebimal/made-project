@@ -1,34 +1,23 @@
-name: Project Testing
-run-name: ${{ github.actor }} is testing the project....
-
+name: Publish
 on:
   push:
     branches:
       - main
-    paths:
-      - project/**
-
-
 jobs:
-  project-feedback:
+  publish:
+    name: Install and publish
     runs-on: ubuntu-latest
-    
-    - name: Checkout
-      uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    # Install python
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.11
-    
-    # pip install
-    - name: Install packages
-      run: pip install -r requirements.txt
-    
-    - name: Kaggle auth
 
-    # execute test pipeline
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+           python-version: 3.11
+
+     
+
       - name: Run shell script
-        run: |
-          chmod +x ./project/tests.sh &&  sh ./project/tests.sh
+        run: sh project/tests.sh 
